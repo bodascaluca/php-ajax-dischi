@@ -14,6 +14,18 @@
 </head>
 <body>
     
+    <header>
+        <div>
+            <select v-model="genre" @change="getDiscs">
+                <option value="">All</option>
+                <option value="Rock">Rock</option>
+                <option value="Pop">Pop</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Metal">Metal</option>
+            </select>
+        </div>
+    </header>
+
     <main id="root"> 
         <div class="container" v-for="data in database">
             <img :src="data.poster" />
